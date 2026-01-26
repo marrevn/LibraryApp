@@ -29,42 +29,43 @@
         private void InitializeComponent()
         {
             pnTop = new Panel();
-            button1 = new Button();
+            btnBack = new Button();
             lblUserName = new Label();
-            btnLogin = new Button();
+            btnExit = new Button();
             panel1 = new Panel();
-            btnProducts = new Button();
+            btnBooks = new Button();
             pnTop.SuspendLayout();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
             // pnTop
             // 
-            pnTop.Controls.Add(button1);
+            pnTop.Controls.Add(btnBack);
             pnTop.Controls.Add(lblUserName);
-            pnTop.Controls.Add(btnLogin);
+            pnTop.Controls.Add(btnExit);
             pnTop.Dock = DockStyle.Top;
             pnTop.Location = new Point(0, 0);
-            pnTop.Margin = new Padding(4, 4, 4, 4);
+            pnTop.Margin = new Padding(4);
             pnTop.Name = "pnTop";
             pnTop.Padding = new Padding(13, 0, 13, 13);
             pnTop.Size = new Size(520, 51);
             pnTop.TabIndex = 1;
             // 
-            // button1
+            // btnBack
             // 
-            button1.BackColor = Color.FromArgb(74, 111, 165);
-            button1.Dock = DockStyle.Left;
-            button1.FlatAppearance.BorderSize = 0;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.ForeColor = Color.White;
-            button1.Location = new Point(13, 0);
-            button1.Margin = new Padding(4, 4, 4, 4);
-            button1.Name = "button1";
-            button1.Size = new Size(150, 38);
-            button1.TabIndex = 9;
-            button1.Text = "Назад";
-            button1.UseVisualStyleBackColor = false;
+            btnBack.BackColor = Color.FromArgb(74, 111, 165);
+            btnBack.Dock = DockStyle.Left;
+            btnBack.FlatAppearance.BorderSize = 0;
+            btnBack.FlatStyle = FlatStyle.Flat;
+            btnBack.ForeColor = Color.White;
+            btnBack.Location = new Point(13, 0);
+            btnBack.Margin = new Padding(4);
+            btnBack.Name = "btnBack";
+            btnBack.Size = new Size(150, 38);
+            btnBack.TabIndex = 9;
+            btnBack.Text = "Назад";
+            btnBack.UseVisualStyleBackColor = false;
+            btnBack.Click += BtnBack_Click;
             // 
             // lblUserName
             // 
@@ -77,25 +78,26 @@
             lblUserName.TabIndex = 8;
             lblUserName.Text = "label1";
             // 
-            // btnLogin
+            // btnExit
             // 
-            btnLogin.BackColor = Color.FromArgb(74, 111, 165);
-            btnLogin.Dock = DockStyle.Right;
-            btnLogin.FlatAppearance.BorderSize = 0;
-            btnLogin.FlatStyle = FlatStyle.Flat;
-            btnLogin.ForeColor = Color.White;
-            btnLogin.Location = new Point(357, 0);
-            btnLogin.Margin = new Padding(4, 4, 4, 4);
-            btnLogin.Name = "btnLogin";
-            btnLogin.Size = new Size(150, 38);
-            btnLogin.TabIndex = 7;
-            btnLogin.Text = "Выход";
-            btnLogin.UseVisualStyleBackColor = false;
+            btnExit.BackColor = Color.FromArgb(74, 111, 165);
+            btnExit.Dock = DockStyle.Right;
+            btnExit.FlatAppearance.BorderSize = 0;
+            btnExit.FlatStyle = FlatStyle.Flat;
+            btnExit.ForeColor = Color.White;
+            btnExit.Location = new Point(357, 0);
+            btnExit.Margin = new Padding(4);
+            btnExit.Name = "btnExit";
+            btnExit.Size = new Size(150, 38);
+            btnExit.TabIndex = 7;
+            btnExit.Text = "Выход";
+            btnExit.UseVisualStyleBackColor = false;
+            btnExit.Click += BtnExit_Click;
             // 
             // panel1
             // 
             panel1.BackColor = Color.White;
-            panel1.Controls.Add(btnProducts);
+            panel1.Controls.Add(btnBooks);
             panel1.Dock = DockStyle.Fill;
             panel1.Location = new Point(0, 51);
             panel1.Name = "panel1";
@@ -103,20 +105,22 @@
             panel1.Size = new Size(520, 294);
             panel1.TabIndex = 3;
             // 
-            // btnProducts
+            // btnBooks
             // 
-            btnProducts.BackColor = Color.AliceBlue;
-            btnProducts.Dock = DockStyle.Top;
-            btnProducts.FlatStyle = FlatStyle.Flat;
-            btnProducts.Font = new Font("Times New Roman", 12F);
-            btnProducts.ForeColor = Color.Black;
-            btnProducts.Location = new Point(10, 10);
-            btnProducts.Margin = new Padding(4);
-            btnProducts.Name = "btnProducts";
-            btnProducts.Size = new Size(500, 50);
-            btnProducts.TabIndex = 5;
-            btnProducts.Text = "КНИГИ";
-            btnProducts.UseVisualStyleBackColor = false;
+            btnBooks.BackColor = Color.FromArgb(74, 111, 165);
+            btnBooks.Dock = DockStyle.Top;
+            btnBooks.FlatAppearance.BorderSize = 0;
+            btnBooks.FlatStyle = FlatStyle.Flat;
+            btnBooks.Font = new Font("Times New Roman", 12F);
+            btnBooks.ForeColor = Color.White;
+            btnBooks.Location = new Point(10, 10);
+            btnBooks.Margin = new Padding(4);
+            btnBooks.Name = "btnBooks";
+            btnBooks.Size = new Size(500, 50);
+            btnBooks.TabIndex = 5;
+            btnBooks.Text = "КНИГИ";
+            btnBooks.UseVisualStyleBackColor = false;
+            btnBooks.Click += BtnBooks_Click;
             // 
             // FormMenu
             // 
@@ -127,7 +131,7 @@
             Controls.Add(panel1);
             Controls.Add(pnTop);
             Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            Margin = new Padding(4, 4, 4, 4);
+            Margin = new Padding(4);
             Name = "FormMenu";
             Text = "FormMenu";
             pnTop.ResumeLayout(false);
@@ -139,10 +143,10 @@
         #endregion
 
         private Panel pnTop;
-        private Button button1;
+        private Button btnBack;
         private Label lblUserName;
-        private Button btnLogin;
+        private Button btnExit;
         private Panel panel1;
-        private Button btnProducts;
+        private Button btnBooks;
     }
 }

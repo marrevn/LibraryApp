@@ -30,25 +30,65 @@
         {
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             pnTop = new Panel();
-            dgvBooks = new DataGridView();
-            btnLogin = new Button();
+            btnBack = new Button();
             lblUserName = new Label();
-            button1 = new Button();
+            btnExit = new Button();
+            dgvBooks = new DataGridView();
             pnTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvBooks).BeginInit();
             SuspendLayout();
             // 
             // pnTop
             // 
-            pnTop.Controls.Add(button1);
+            pnTop.Controls.Add(btnBack);
             pnTop.Controls.Add(lblUserName);
-            pnTop.Controls.Add(btnLogin);
+            pnTop.Controls.Add(btnExit);
             pnTop.Dock = DockStyle.Top;
             pnTop.Location = new Point(10, 10);
             pnTop.Name = "pnTop";
             pnTop.Padding = new Padding(10, 0, 10, 10);
             pnTop.Size = new Size(964, 40);
             pnTop.TabIndex = 0;
+            // 
+            // btnBack
+            // 
+            btnBack.BackColor = Color.FromArgb(74, 111, 165);
+            btnBack.Dock = DockStyle.Left;
+            btnBack.FlatAppearance.BorderSize = 0;
+            btnBack.FlatStyle = FlatStyle.Flat;
+            btnBack.ForeColor = Color.White;
+            btnBack.Location = new Point(10, 0);
+            btnBack.Name = "btnBack";
+            btnBack.Size = new Size(150, 30);
+            btnBack.TabIndex = 9;
+            btnBack.Text = "Назад";
+            btnBack.UseVisualStyleBackColor = false;
+            btnBack.Click += BtnBack_Click;
+            // 
+            // lblUserName
+            // 
+            lblUserName.AutoSize = true;
+            lblUserName.Dock = DockStyle.Right;
+            lblUserName.Location = new Point(759, 0);
+            lblUserName.Name = "lblUserName";
+            lblUserName.Size = new Size(45, 19);
+            lblUserName.TabIndex = 8;
+            lblUserName.Text = "label1";
+            // 
+            // btnExit
+            // 
+            btnExit.BackColor = Color.FromArgb(74, 111, 165);
+            btnExit.Dock = DockStyle.Right;
+            btnExit.FlatAppearance.BorderSize = 0;
+            btnExit.FlatStyle = FlatStyle.Flat;
+            btnExit.ForeColor = Color.White;
+            btnExit.Location = new Point(804, 0);
+            btnExit.Name = "btnExit";
+            btnExit.Size = new Size(150, 30);
+            btnExit.TabIndex = 7;
+            btnExit.Text = "Выход";
+            btnExit.UseVisualStyleBackColor = false;
+            btnExit.Click += BtnExit_Click_1;
             // 
             // dgvBooks
             // 
@@ -76,44 +116,6 @@
             dgvBooks.Size = new Size(964, 601);
             dgvBooks.TabIndex = 1;
             // 
-            // btnLogin
-            // 
-            btnLogin.BackColor = Color.FromArgb(74, 111, 165);
-            btnLogin.Dock = DockStyle.Right;
-            btnLogin.FlatAppearance.BorderSize = 0;
-            btnLogin.FlatStyle = FlatStyle.Flat;
-            btnLogin.ForeColor = Color.White;
-            btnLogin.Location = new Point(804, 0);
-            btnLogin.Name = "btnLogin";
-            btnLogin.Size = new Size(150, 30);
-            btnLogin.TabIndex = 7;
-            btnLogin.Text = "Выход";
-            btnLogin.UseVisualStyleBackColor = false;
-            // 
-            // lblUserName
-            // 
-            lblUserName.AutoSize = true;
-            lblUserName.Dock = DockStyle.Right;
-            lblUserName.Location = new Point(759, 0);
-            lblUserName.Name = "lblUserName";
-            lblUserName.Size = new Size(45, 19);
-            lblUserName.TabIndex = 8;
-            lblUserName.Text = "label1";
-            // 
-            // button1
-            // 
-            button1.BackColor = Color.FromArgb(74, 111, 165);
-            button1.Dock = DockStyle.Left;
-            button1.FlatAppearance.BorderSize = 0;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.ForeColor = Color.White;
-            button1.Location = new Point(10, 0);
-            button1.Name = "button1";
-            button1.Size = new Size(150, 30);
-            button1.TabIndex = 9;
-            button1.Text = "Назад";
-            button1.UseVisualStyleBackColor = false;
-            // 
             // FormBooks
             // 
             AutoScaleDimensions = new SizeF(9F, 19F);
@@ -123,7 +125,7 @@
             Controls.Add(dgvBooks);
             Controls.Add(pnTop);
             Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            Margin = new Padding(4, 4, 4, 4);
+            Margin = new Padding(4);
             Name = "FormBooks";
             Padding = new Padding(10);
             StartPosition = FormStartPosition.CenterScreen;
@@ -139,7 +141,7 @@
         private Panel pnTop;
         private DataGridView dgvBooks;
         private Label lblUserName;
-        private Button btnLogin;
-        private Button button1;
+        private Button btnExit;
+        private Button btnBack;
     }
 }
