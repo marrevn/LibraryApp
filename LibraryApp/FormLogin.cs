@@ -6,7 +6,7 @@ namespace LibraryApp
     public partial class FormLogin : Form
     {
         public User CurrentUser { get; private set; }
-        public bool IsGuest { get; private set; }   
+        public bool IsGuest { get; private set; }
         public FormLogin()
         {
             InitializeComponent();
@@ -20,10 +20,10 @@ namespace LibraryApp
                     MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            using(var db = new LibDbContext())
+            using (var db = new LibDbContext())
             {
                 var user = db.Users
-                    .Where(w=>w.Login==txtLogin.Text && w.PasswordUser==txtPassword.Text)
+                    .Where(w => w.Login == txtLogin.Text && w.PasswordUser == txtPassword.Text)
                     .FirstOrDefault();
 
                 if (user != null)
@@ -32,7 +32,9 @@ namespace LibraryApp
                     IsGuest = false;
                     this.DialogResult = DialogResult.OK;
                     this.Close();
-                }else{
+                }
+                else
+                {
                     MessageBox.Show("Неверный логин или пароль", "Ошибка",
                         MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }

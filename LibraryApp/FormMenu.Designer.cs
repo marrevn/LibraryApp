@@ -48,7 +48,7 @@
             pnTop.Margin = new Padding(4);
             pnTop.Name = "pnTop";
             pnTop.Padding = new Padding(13, 0, 13, 13);
-            pnTop.Size = new Size(520, 51);
+            pnTop.Size = new Size(580, 51);
             pnTop.TabIndex = 1;
             // 
             // btnBack
@@ -71,7 +71,7 @@
             // 
             lblUserName.AutoSize = true;
             lblUserName.Dock = DockStyle.Right;
-            lblUserName.Location = new Point(312, 0);
+            lblUserName.Location = new Point(372, 0);
             lblUserName.Margin = new Padding(4, 0, 4, 0);
             lblUserName.Name = "lblUserName";
             lblUserName.Size = new Size(45, 19);
@@ -85,7 +85,7 @@
             btnExit.FlatAppearance.BorderSize = 0;
             btnExit.FlatStyle = FlatStyle.Flat;
             btnExit.ForeColor = Color.White;
-            btnExit.Location = new Point(357, 0);
+            btnExit.Location = new Point(417, 0);
             btnExit.Margin = new Padding(4);
             btnExit.Name = "btnExit";
             btnExit.Size = new Size(150, 38);
@@ -102,7 +102,7 @@
             panel1.Location = new Point(0, 51);
             panel1.Name = "panel1";
             panel1.Padding = new Padding(10);
-            panel1.Size = new Size(520, 294);
+            panel1.Size = new Size(580, 352);
             panel1.TabIndex = 3;
             // 
             // btnBooks
@@ -116,7 +116,7 @@
             btnBooks.Location = new Point(10, 10);
             btnBooks.Margin = new Padding(4);
             btnBooks.Name = "btnBooks";
-            btnBooks.Size = new Size(500, 50);
+            btnBooks.Size = new Size(560, 50);
             btnBooks.TabIndex = 5;
             btnBooks.Text = "КНИГИ";
             btnBooks.UseVisualStyleBackColor = false;
@@ -127,12 +127,13 @@
             AutoScaleDimensions = new SizeF(9F, 19F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(520, 345);
+            ClientSize = new Size(580, 403);
             Controls.Add(panel1);
             Controls.Add(pnTop);
             Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 204);
             Margin = new Padding(4);
             Name = "FormMenu";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "FormMenu";
             pnTop.ResumeLayout(false);
             pnTop.PerformLayout();

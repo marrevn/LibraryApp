@@ -32,6 +32,7 @@ public partial class LibDbContext : DbContext
     public virtual DbSet<User> Users { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see https://go.microsoft.com/fwlink/?LinkId=723263.
         => optionsBuilder.UseNpgsql("Host=localhost;Port=5432;Database=lib_db;Username=postgres;Password=1111");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -61,6 +62,7 @@ public partial class LibDbContext : DbContext
             entity.Property(e => e.IdPublishing).HasColumnName("id_publishing");
             entity.Property(e => e.NameBook).HasColumnName("name_book");
             entity.Property(e => e.Page).HasColumnName("page");
+            entity.Property(e => e.PhotoUrl).HasColumnName("photo_url");
             entity.Property(e => e.YearIzd).HasColumnName("year_izd");
 
             entity.HasOne(d => d.Avtor).WithMany(p => p.Books)
@@ -156,6 +158,11 @@ public partial class LibDbContext : DbContext
             entity.Property(e => e.IdRole).HasColumnName("id_role");
             entity.Property(e => e.Login).HasColumnName("login");
             entity.Property(e => e.PasswordUser).HasColumnName("password_user");
+
+            entity.HasOne(d => d.Role).WithMany(p => p.Users)
+                .HasForeignKey(d => d.IdRole)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("fk_user_to_roles");
         });
 
         OnModelCreatingPartial(modelBuilder);

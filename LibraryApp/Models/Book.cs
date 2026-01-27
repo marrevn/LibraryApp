@@ -25,6 +25,8 @@ public partial class Book
 
     public string Annotation { get; set; } = null!;
 
+    public string? PhotoUrl { get; set; }
+
     public virtual ICollection<BookLoan> BookLoans { get; set; } = new List<BookLoan>();
 
     public virtual Avtor Avtor { get; set; } = null!;
