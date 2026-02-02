@@ -46,7 +46,7 @@
             pnTop.Dock = DockStyle.Top;
             pnTop.Location = new Point(10, 10);
             pnTop.Name = "pnTop";
-            pnTop.Padding = new Padding(10, 0, 10, 10);
+            pnTop.Padding = new Padding(0, 0, 0, 10);
             pnTop.Size = new Size(964, 40);
             pnTop.TabIndex = 0;
             // 
@@ -57,7 +57,7 @@
             btnBack.FlatAppearance.BorderSize = 0;
             btnBack.FlatStyle = FlatStyle.Flat;
             btnBack.ForeColor = Color.White;
-            btnBack.Location = new Point(10, 0);
+            btnBack.Location = new Point(0, 0);
             btnBack.Name = "btnBack";
             btnBack.Size = new Size(150, 30);
             btnBack.TabIndex = 9;
@@ -69,7 +69,7 @@
             // 
             lblUserName.AutoSize = true;
             lblUserName.Dock = DockStyle.Right;
-            lblUserName.Location = new Point(759, 0);
+            lblUserName.Location = new Point(769, 0);
             lblUserName.Name = "lblUserName";
             lblUserName.Size = new Size(45, 19);
             lblUserName.TabIndex = 8;
@@ -82,7 +82,7 @@
             btnExit.FlatAppearance.BorderSize = 0;
             btnExit.FlatStyle = FlatStyle.Flat;
             btnExit.ForeColor = Color.White;
-            btnExit.Location = new Point(804, 0);
+            btnExit.Location = new Point(814, 0);
             btnExit.Name = "btnExit";
             btnExit.Size = new Size(150, 30);
             btnExit.TabIndex = 7;

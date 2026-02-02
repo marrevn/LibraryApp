@@ -23,11 +23,11 @@ namespace LibraryApp
             colPhoto.Name = "colPhoto";
             colPhoto.ImageLayout = DataGridViewImageCellLayout.Zoom;
             colPhoto.Width = 200;
-            colPhoto.FillWeight = 30;
+            colPhoto.FillWeight = 15;
 
             var colInfo = new DataGridViewTextBoxColumn();
             colInfo.Name = "colInfo";
-            colInfo.FillWeight = 70;
+            colInfo.FillWeight = 85;
             colInfo.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
 
             dgvBooks.Columns.AddRange(
@@ -135,7 +135,10 @@ namespace LibraryApp
 
             return Resources.picture;
         }
-
+        protected override void OnFormClosing(FormClosingEventArgs e)
+        {
+            base.OnFormClosing(e);
+        }
         private void BtnExit_Click_1(object sender, EventArgs e)
         {
             this.DialogResult = DialogResult.Cancel;

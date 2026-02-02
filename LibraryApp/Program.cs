@@ -15,11 +15,11 @@ namespace LibraryApp
                 {
                     if (formLogin.ShowDialog() == DialogResult.OK)
                     {
-                        using (var formMenu = new FormMenu(
+                        using (var formProducts = new FormBooks(
                             formLogin.CurrentUser,
                             formLogin.IsGuest))
                         {
-                            if (formMenu.ShowDialog() == DialogResult.Cancel)
+                            if (formProducts.ShowDialog() == DialogResult.Cancel)
                             {
                                 continue;
                             }
