@@ -1,13 +1,6 @@
 ﻿using LibraryApp.Models;
 using LibraryApp.Properties;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
-using System.Windows.Forms;
 
 namespace LibraryApp
 {
@@ -22,8 +15,9 @@ namespace LibraryApp
             var colPhoto = new DataGridViewImageColumn();
             colPhoto.Name = "colPhoto";
             colPhoto.ImageLayout = DataGridViewImageCellLayout.Zoom;
-            colPhoto.Width = 200;
+            colPhoto.Width = 100;
             colPhoto.FillWeight = 15;
+            dgvBooks.RowTemplate.Height = 100;
 
             var colInfo = new DataGridViewTextBoxColumn();
             colInfo.Name = "colInfo";
@@ -118,7 +112,7 @@ namespace LibraryApp
                 $"Страниц: {book.Page}" + Environment.NewLine +
                 $"Всего экземпляров: {book.Copies}" + Environment.NewLine +
                 $"Доступно экземпляров: {book.CountBook}" + Environment.NewLine +
-                $"Аннотация:{book.Annotation}";
+                $"Аннотация: {book.Annotation}";
         }
 
         private Image LoadBookImage(string photoUrl)
